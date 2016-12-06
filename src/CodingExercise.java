@@ -10,7 +10,7 @@ public class CodingExercise {
 
 	public static void main(String[] args) {
 		// 1. Create a random number from 0 to 4 and store it in a ‘bases’ variable
-		int bases = new Random().nextInt(5);
+		int bases = new Random().nextInt(7);
 		System.out.println(bases);
 		// 2. If the number is zero display a window that says “the batter is out”
 		if (bases == 0) {
@@ -22,6 +22,10 @@ public class CodingExercise {
 		} else if (bases == 3) {
 			JOptionPane.showMessageDialog(null, "the batter hit a triple");
 		} else if (bases == 4) {
+			JOptionPane.showMessageDialog(null, "the batter hit a quadruple");
+		} else if (bases == 5) {
+			JOptionPane.showMessageDialog(null, "the batter hit a quintuple");
+		} else if (bases == 6) {
 			JOptionPane.showMessageDialog(null, "the batter hit a home run");
 		}
 		// 3. Otherwise display “the batter hit a ” and “single”, “double”, “triple” or “home run”
@@ -33,10 +37,10 @@ public class CodingExercise {
 		Robot runner = new Robot();
 		runner.penDown();
 		runner.setSpeed(10);
-		runner.turn(45);
+		runner.turn(360/6);
 		for (int i = 0; i < bases; i++) {
 			runner.move(150);
-			runner.turn(-90);
+			runner.turn(-360/6);
 		}
 
 	}
